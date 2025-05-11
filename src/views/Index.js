@@ -14,35 +14,31 @@ export default function Index() {
           <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
             <div className="pt-32 sm:pt-0">
               <h2 className="font-semibold text-4xl text-blueGray-600">
-                Notus React - A beautiful extension for Tailwind CSS.
+                Unlock the Confidence to Crush Your Fitness Goals
               </h2>
+              <h4 className="font-bold text-4xl text-blueGray-501">
+                Starting Today!
+              </h4>
+
               <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
-                Notus React is Free and Open Source. It does not change any of
-                the CSS from{" "}
-                <a
-                  href="https://tailwindcss.com/?ref=creativetim"
-                  className="text-blueGray-600"
-                  target="_blank"
-                >
-                  Tailwind CSS
-                </a>
-                . It features multiple HTML elements and it comes with dynamic
-                components for ReactJS, Vue and Angular.
+                Fitness Plans Empowering Beginners with Tools, Accountability,
+                and Knowledge to Succeed.{" "}
+
               </p>
               <div className="mt-12">
                 <a
                   href="https://www.creative-tim.com/learning-lab/tailwind/react/overview/notus?ref=nr-index"
                   target="_blank"
-                  className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-lightBlue-500 active:bg-lightBlue-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+                  className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-btncolor active:bg-lightBlue-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
                 >
                   Get started
                 </a>
                 <a
                   href="https://github.com/creativetimofficial/notus-react?ref=nr-index"
-                  className="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+                  className="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-color303 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
                   target="_blank"
                 >
-                  Github Star
+                 Welcome back
                 </a>
               </div>
             </div>
@@ -50,13 +46,13 @@ export default function Index() {
         </div>
 
         <img
-          className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860px bg-black"
+          className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860px"
           src={require("assets/img/pattern_react.png").default}
           alt="Pattern React"
         />
       </section>
 
-      <section className="mt-48 md:mt-40 pb-40 relative bg-blueGray-100">
+      <section className="mt-48 md:mt-40 pb-40 relative bg-color302">
         <div
           className="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
           style={{ transform: "translateZ(0)" }}
@@ -71,7 +67,7 @@ export default function Index() {
             y="0"
           >
             <polygon
-              className="text-blueGray-100 fill-current"
+              className="text-blueGray-401 fill-current"
               points="2560 0 2560 100 0 100"
             ></polygon>
           </svg>
@@ -79,7 +75,7 @@ export default function Index() {
         <div className="container mx-auto">
           <div className="flex flex-wrap items-center">
             <div className="w-10/12 md:w-6/12 lg:w-4/12 px-12 md:px-4 mr-auto ml-auto -mt-32">
-              <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-lightBlue-500">
+              <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-color303">
                 <img
                   alt="..."
                   src="https://img.freepik.com/free-photo/full-shot-woman-holding-dumbbell_23-2149249516.jpg?t=st=1746915516~exp=1746919116~hmac=78c4b0a355d0eb3ba896b68a2d6d24528e20b22598504a62c213ac78473de519&w=996"
@@ -94,17 +90,15 @@ export default function Index() {
                   >
                     <polygon
                       points="-30,95 583,95 583,65"
-                      className="text-lightBlue-500 fill-current"
+                      className="text-blueGray-501 fill-current"
                     ></polygon>
                   </svg>
                   <h4 className="text-xl font-bold text-white">
-                    Great for your awesome project
+                    Your Smart Coach, Always by Your Side
                   </h4>
                   <p className="text-md font-light mt-2 text-white">
-                    Putting together a page has never been easier than matching
-                    together pre-made components. From landing pages
-                    presentation to login areas, you can easily customise and
-                    built your pages.
+                    AI Coach analyzes your progress, understands your goals, and offers tailored guidance 24/7. Whether you're working on productivity, mindset, or career development, your AI coach is here to keep you focused and moving forward.
+
                   </p>
                 </blockquote>
               </div>
@@ -116,28 +110,28 @@ export default function Index() {
                   <div className="relative flex flex-col mt-4">
                     <div className="px-4 py-5 flex-auto">
                       <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
-                        <i className="fas fa-sitemap"></i>
+                        <i className="fas fa-sitemap text-blueGray-501"></i>
                       </div>
-                      <h6 className="text-xl mb-1 font-semibold">
-                        CSS Components
+                      <h6 className="text-xl mb-1 font-semibold text-blueGray-501">
+                        Training Plans
                       </h6>
-                      <p className="mb-4 text-blueGray-500">
-                        Notus React comes with a huge number of Fully Coded CSS
-                        components.
+                      <p className="mb-4 text-blueGray-100">
+                        Get fully personalized training programs based on your fitness level, goals, and progress. Our AI coach adapts your workouts in real time, making sure you stay challenged, safe, and on track to results.
+
                       </p>
                     </div>
                   </div>
                   <div className="relative flex flex-col min-w-0">
                     <div className="px-4 py-5 flex-auto">
                       <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
-                        <i className="fas fa-drafting-compass"></i>
+                        <i class='fas fa-camera text-blueGray-501'></i>
+
                       </div>
-                      <h6 className="text-xl mb-1 font-semibold">
-                        JavaScript Components
+                      <h6 className="text-xl mb-1 font-semibold text-blueGray-501">
+                        Real Time
                       </h6>
-                      <p className="mb-4 text-blueGray-500">
-                        We also feature many dynamic components for React,
-                        NextJS, Vue and Angular.
+                      <p className="mb-4 text-blueGray-100">
+                        Train smarter with instant feedback on your form and posture. Using advanced computer vision, our AI coach detects your movements and corrects errors in real time just like a personal trainer.
                       </p>
                     </div>
                   </div>
@@ -146,26 +140,25 @@ export default function Index() {
                   <div className="relative flex flex-col min-w-0 mt-4">
                     <div className="px-4 py-5 flex-auto">
                       <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
-                        <i className="fas fa-newspaper"></i>
+                        <i className="fas fa-dumbbell text-blueGray-501"></i>
                       </div>
-                      <h6 className="text-xl mb-1 font-semibold">Pages</h6>
-                      <p className="mb-4 text-blueGray-500">
-                        This extension also comes with 3 sample pages. They are
-                        fully coded so you can start working instantly.
+                      <h6 className="text-xl mb-1 font-semibold text-blueGray-501">Progress</h6>
+                      <p className="mb-4 text-blueGray-100">
+                        Monitor your performance with intuitive dashboards and real-time analytics. See how far you’ve come, identify areas for improvement, and celebrate every milestone . 
+
                       </p>
                     </div>
                   </div>
                   <div className="relative flex flex-col min-w-0">
                     <div className="px-4 py-5 flex-auto">
                       <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
-                        <i className="fas fa-file-alt"></i>
+                        <i className="fas fa-pizza-slice text-blueGray-501"></i>
                       </div>
-                      <h6 className="text-xl mb-1 font-semibold">
-                        Documentation
+                      <h6 className="text-xl mb-1 font-semibold text-blueGray-501">
+                        Diet
                       </h6>
-                      <p className="mb-4 text-blueGray-500">
-                        Built by developers for developers. You will love how
-                        easy is to to work with Notus React.
+                      <p className="mb-4 text-blueGray-100">
+                        Our AI-powered platform helps you achieve your health goals by creating personalized food diet plans based on your body type, lifestyle, and preferences. Whether you want to lose weight, gain muscle, manage a health condition, or simply eat healthier. 
                       </p>
                     </div>
                   </div>
@@ -181,13 +174,11 @@ export default function Index() {
               <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
                 <i className="fas fa-sitemap text-xl"></i>
               </div>
-              <h3 className="text-3xl mb-2 font-semibold leading-normal">
-                CSS Components
+              <h3 className="text-3xl mb-2 font-semibold text-blueGray-501 leading-normal">
+                Real Time
               </h3>
-              <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
-                Every element that you need in a product comes built in as a
-                component. All components fit perfectly with each other and can
-                have different colours.
+              <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-100">
+                Get fully personalized training programs based on your fitness level, goals, and progress. Our AI coach adapts your workouts in real time, making sure you stay challenged, safe, and on track to results.
               </p>
               <div className="block pb-6">
                 <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">

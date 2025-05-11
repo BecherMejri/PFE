@@ -73,7 +73,7 @@ Grouping content
 
 /**
 1. Add the correct height in Firefox.
-2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=19065)
 */
 
 hr {
@@ -1215,6 +1215,15 @@ select {
   background-color: rgba(248, 250, 252, var(--tw-bg-opacity));
 }
 
+.bg-blueGray-300 {
+  --tw-bg-opacity: 1;
+  background-color: #0d0f0e
+}
+.bg-blueGray-400 {
+  --tw-bg-opacity: 1;
+  background-color: #99a69d;
+}
+
 .bg-blueGray-100 {
   --tw-bg-opacity: 1;
   background-color: rgba(241, 245, 249, var(--tw-bg-opacity));
@@ -1272,6 +1281,21 @@ select {
   background-size: cover;
 }
 
+.bg-color301 {
+  background-color: #0d0f0e;
+}
+.bg-color302 {
+  background-color: #99a69d;
+}
+.bg-color303 {
+  background-color: #313935;
+}
+.bg-btncolor {
+  background-color: #596b66;
+}
+.bg-color305 {
+  background-color: #dee7e3;
+}
 .bg-full {
   background-size: 100%;
 }
@@ -2418,10 +2442,18 @@ select {
   --tw-text-opacity: 1;
   color: rgba(148, 163, 184, var(--tw-text-opacity));
 }
+.text-blueGray-401 {
+  --tw-text-opacity: 1;
+  color: #99a69d;
+}
 
 .text-blueGray-500 {
   --tw-text-opacity: 1;
   color: rgba(100, 116, 139, var(--tw-text-opacity));
+}
+.text-blueGray-501 {
+  --tw-text-opacity: 1;
+  color: #313935;
 }
 
 .text-blueGray-600 {

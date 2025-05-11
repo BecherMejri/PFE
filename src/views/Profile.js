@@ -13,7 +13,7 @@ export default function Profile() {
             className="absolute top-0 w-full h-full bg-center bg-cover"
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2710&q=80')",
+                "url('https://img.freepik.com/free-photo/3d-gym-equipment_23-2151114224.jpg?t=st=1746985509~exp=1746989109~hmac=02b44a3f53cec91fb59bc5e73fcf223913810d496277f3b0ffa234272bc1bdea&w=1380')",
             }}
           >
             <span
