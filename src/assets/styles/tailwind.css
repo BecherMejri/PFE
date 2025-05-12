@@ -73,7 +73,7 @@ Grouping content
 
 /**
 1. Add the correct height in Firefox.
-2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=19065)
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
 */
 
 hr {
@@ -204,6 +204,7 @@ Correct the inability to style clickable types in iOS and Safari.
 button,
 [type='button'] {
   -webkit-appearance: button;
+  appearance: button;
 }
 
 /**
@@ -501,6 +502,7 @@ embed,
 object {
   display: block;
   vertical-align: middle;
+
 }
 
 /**
@@ -578,7 +580,11 @@ select {
   background-size: 1.5em 1.5em;
   padding-right: 2.5rem;
   -webkit-print-color-adjust: exact;
-          color-adjust: exact;
+  print-color-adjust: exact;
+  print-color-adjust: exact;
+  print-color-adjust: exact;
+  print-color-adjust: exact;
+          print-color-adjust: exact;
 }
 
 [multiple] {
@@ -588,7 +594,8 @@ select {
   background-size: initial;
   padding-right: 0.75rem;
   -webkit-print-color-adjust: unset;
-          color-adjust: unset;
+  print-color-adjust: unset;
+          print-color-adjust: unset;
 }
 
 
@@ -597,7 +604,7 @@ select {
           appearance: none;
   padding: 0;
   -webkit-print-color-adjust: exact;
-          color-adjust: exact;
+          print-color-adjust: exact;
   display: inline-block;
   vertical-align: middle;
   background-origin: border-box;

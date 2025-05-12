@@ -1,11 +1,68 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-
+import { getAllUsers, deleteUserById, addUser , updateUser } from "../../services/ApiUser"; //1 importation
 // components
 
-import TableDropdown from "components/Dropdowns/TableDropdown.js";
-
 export default function CardTable({ color }) {
+  const [users, setUsers] = useState([]); //2 const (get)
+
+  const getUsers = async () => {
+    //3 fct getUsers
+    try {
+      await getAllUsers().then((res) => {
+        setUsers(res.data.userList);
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const deleteUser = async (id) => {
+    try {
+      await deleteUserById(id);
+      getUsers();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getUsers();
+  }, []);
+
+  //--------------add-----------------
+  const [newUser, setNewUser] = useState({
+    firstName: "",
+    lastName: "",
+    age: "",
+    email: "",
+    password: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setNewUser({ ...newUser, [name]: value });
+  };
+
+  const AddNewUser = async () => {
+    try {
+      await addUser(newUser);
+      getUsers();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const updateNewUser = async (newUser,id) => {
+    try {
+      await updateUser(newUser,id);
+      getUsers();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+
   return (
     <>
       <div
@@ -23,8 +80,66 @@ export default function CardTable({ color }) {
                   (color === "light" ? "text-blueGray-700" : "text-white")
                 }
               >
-                Users table
+                List Users
               </h3>
+              <div>
+                <input
+                  type="text"
+                  placeholder="FirstName"
+                  className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring mr-2 ease-linear transition-all duration-150"
+                  name="firstName"
+                  value={newUser.firstName}
+                  onChange={handleChange}
+                />
+                <input
+                  type="text"
+                  placeholder="lastName"
+                  className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring mr-2 ease-linear transition-all duration-150"
+                  name="lastName"
+                  value={newUser.lastName}
+                  onChange={handleChange}
+                />
+                <input
+                  type="number"
+                  placeholder="age"
+                  className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring mr-2 ease-linear transition-all duration-150"
+                  name="age"
+                  value={newUser.age}
+                  onChange={handleChange}
+                />
+                <input
+                  type="email"
+                  placeholder="email"
+                  className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring mr-2 ease-linear transition-all duration-150"
+                  name="email"
+                  value={newUser.email}
+                  onChange={handleChange}
+                />
+                <input
+                  type="password"
+                  placeholder="password"
+                  name="password"
+                  className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring ease-linear transition-all duration-150"
+                  onChange={handleChange}
+                />
+                <br></br>
+                <button
+                  onClick={() => {
+                    AddNewUser(newUser);
+                  }}
+                  className="bg-btncolor mt-2 text-white active:bg-blueGray-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                >
+                  AddUser
+                </button>
+                <button
+                  onClick={() => {
+                    updateNewUser(newUser,newUser._id);
+                  }}
+                  className="bg-btncolor mt-2 text-white active:bg-blueGray-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                >
+                  update user
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -41,7 +156,7 @@ export default function CardTable({ color }) {
                       : "bg-lightBlue-800 text-lightBlue-300 border-lightBlue-700")
                   }
                 >
-                  First Name
+                  FirstName
                 </th>
                 <th
                   className={
@@ -51,7 +166,7 @@ export default function CardTable({ color }) {
                       : "bg-lightBlue-800 text-lightBlue-300 border-lightBlue-700")
                   }
                 >
-                  Last Name
+                  LastName
                 </th>
                 <th
                   className={
@@ -61,7 +176,7 @@ export default function CardTable({ color }) {
                       : "bg-lightBlue-800 text-lightBlue-300 border-lightBlue-700")
                   }
                 >
-                  Level
+                  Email
                 </th>
                 <th
                   className={
@@ -71,17 +186,7 @@ export default function CardTable({ color }) {
                       : "bg-lightBlue-800 text-lightBlue-300 border-lightBlue-700")
                   }
                 >
-                  profil pic 
-                </th>
-                <th
-                  className={
-                    "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
-                    (color === "light"
-                      ? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
-                      : "bg-lightBlue-800 text-lightBlue-300 border-lightBlue-700")
-                  }
-                >
-                  Completion
+                  CreatedAt
                 </th>
                 <th
                   className={
@@ -94,69 +199,67 @@ export default function CardTable({ color }) {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
-                  <img
-                    src={require("assets/img/bootstrap.jpg").default}
-                    className="h-12 w-12 bg-white rounded-full border"
-                    alt="..."
-                  ></img>{" "}
-                  <span
-                    className={
-                      "ml-3 font-bold " +
-                      +(color === "light" ? "text-blueGray-600" : "text-white")
-                    }
-                  >
-                    Becher
-                  </span>
-                </th>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                  Mejri
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                  smt
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                  <div className="flex">
+              {users.map((user, index) => (
+                <tr>
+                  <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
                     <img
-                      src={require("assets/img/team-1-800x800.jpg").default}
+                      src={require("assets/img/bootstrap.jpg").default}
+                      className="h-12 w-12 bg-white rounded-full border"
                       alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-2-800x800.jpg").default}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-3-800x800.jpg").default}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-4-470x470.png").default}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4"
-                    ></img>
-                  </div>
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                  <div className="flex items-center">
-                    <span className="mr-2">60%</span>
-                    <div className="relative w-full">
-                      <div className="overflow-hidden h-2 text-xs flex rounded bg-red-200">
-                        <div
-                          style={{ width: "60%" }}
-                          className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right">
-                  <TableDropdown />
-                </td>
-              </tr>
+                    ></img>{" "}
+                    <span
+                      className={
+                        "ml-3 font-bold " +
+                        +(color === "light"
+                          ? "text-blueGray-600"
+                          : "text-white")
+                      }
+                    >
+                      {user.firstName}
+                    </span>
+                  </th>
+                  <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                    {user.lastName}
+                  </td>
+                  <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                    {user.email}
+                  </td>
+                  <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                    {user.createdAt}
+                  </td>
+                  <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right">
+                    <button
+                      className="bg-btncolor text-white active:bg-lightBlue-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                      type="button"
+                      style={{ color: "#4a5568" }}
+                      onClick={() => {
+                        setNewUser(user)
+                      }}
+                    >
+                      update
+                    </button>
+                    <button
+                      className="bg-btncolor text-white active:bg-blueGray-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                      type="button"
+                      style={{ color: "#4a5568" }}
+                      onClick={() => {
+                        setNewUser(user)
+                      }}
+                    >
+                      update password
+                    </button>
+                    <button
+                      className="bg-btncolor text-white active:bg-blueGray-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                      type="button"
+                      onClick={() => {
+                        deleteUser(user._id);
+                      }}
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
