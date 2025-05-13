@@ -19,7 +19,7 @@ export default function Admin() {
   return (
     <>
       <Sidebar />
-      <div className="relative md:ml-64 bg-blueGray-100">
+      <div className="relative md:ml-64 bg-color302">
         <AdminNavbar />
         {/* Header */}
         <HeaderStats />

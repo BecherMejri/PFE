@@ -26,20 +26,21 @@ export default function wlc() {
 
               </p>
               <div className="mt-12">
-                <a
-                  href="https://www.creative-tim.com/learning-lab/tailwind/react/overview/notus?ref=nr-index"
-                  target="_blank"
-                  className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-btncolor active:bg-lightBlue-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+              
+                <Link
+                  to="/auth/register"
+                  className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-btncolor active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
                 >
-                  Get started
-                </a>
-                <a
-                  href="https://github.com/creativetimofficial/notus-react?ref=nr-index"
+                  Get Started
+                </Link>
+            
+                <Link
+                  to="/auth/login"
                   className="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-color303 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
-                  target="_blank"
                 >
-                 Welcome back
-                </a>
+                  Welcome back
+                </Link>
+
               </div>
             </div>
           </div>
@@ -144,7 +145,7 @@ export default function wlc() {
                       </div>
                       <h6 className="text-xl mb-1 font-semibold text-blueGray-501">Progress</h6>
                       <p className="mb-4 text-blueGray-100">
-                        Monitor your performance with intuitive dashboards and real-time analytics. See how far you’ve come, identify areas for improvement, and celebrate every milestone . 
+                        Monitor your performance with intuitive dashboards and real-time analytics. See how far you’ve come, identify areas for improvement, and celebrate every milestone .
 
                       </p>
                     </div>
@@ -158,7 +159,7 @@ export default function wlc() {
                         Diet
                       </h6>
                       <p className="mb-4 text-blueGray-100">
-                        Our AI-powered platform helps you achieve your health goals by creating personalized food diet plans based on your body type, lifestyle, and preferences. Whether you want to lose weight, gain muscle, manage a health condition, or simply eat healthier. 
+                        Our AI-powered platform helps you achieve your health goals by creating personalized food diet plans based on your body type, lifestyle, and preferences. Whether you want to lose weight, gain muscle, manage a health condition, or simply eat healthier.
                       </p>
                     </div>
                   </div>
@@ -495,7 +496,7 @@ export default function wlc() {
         </div>
       </section>
 
-      <section className="block relative z-1 bg-blueGray-600">
+      <section className="block relative z-1 bg-btncolor">
         <div className="container mx-auto">
           <div className="justify-center flex flex-wrap">
             <div className="w-full lg:w-12/12 px-4  -mt-24">
@@ -550,12 +551,12 @@ export default function wlc() {
         </div>
       </section>
 
-      <section className="py-20 bg-blueGray-600 overflow-hidden">
+      <section className="py-20 bg-btncolor overflow-hidden">
         <div className="container mx-auto pb-64">
           <div className="flex flex-wrap justify-center">
             <div className="w-full md:w-5/12 px-12 md:px-4 ml-auto mr-auto md:mt-64">
               <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
-                <i className="fas fa-code-branch text-xl"></i>
+                <i className="fas fa-laptop text-xl"></i>
               </div>
               <h3 className="text-3xl mb-2 font-semibold leading-normal text-white">
                 Open Source
@@ -577,23 +578,23 @@ export default function wlc() {
                 Get it free on Github and please help us spread the news with a
                 Star!
               </p>
-              <a
+              <Link
                 href="https://github.com/creativetimofficial/notus-react?ref=nr-index"
                 target="_blank"
-                className="github-star mt-4 inline-block text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg"
+                className="github-star mt-4 inline-block text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-color302 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg"
               >
                 Github Star
-              </a>
+              </Link>
             </div>
 
             <div className="w-full md:w-4/12 px-4 mr-auto ml-auto mt-32 relative">
-              <i className="fab fa-github text-blueGray-700 absolute -top-150-px -right-100 left-auto opacity-80 text-55"></i>
+              <i className="fas fa-robot text-blueGray-100 absolute -top-150-px -right-100 left-auto opacity-80 text-40 mr-8 mt-16"></i>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="pb-16 bg-blueGray-200 relative pt-32">
+      <section className="pb-16 bg-color302 relative pt-32">
         <div
           className="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
           style={{ transform: "translateZ(0)" }}
@@ -608,7 +609,7 @@ export default function wlc() {
             y="0"
           >
             <polygon
-              className="text-blueGray-200 fill-current"
+              className="text-blueGray-401 fill-current"
               points="2560 0 2560 100 0 100"
             ></polygon>
           </svg>
@@ -631,17 +632,16 @@ export default function wlc() {
                 new web app or give an old project a new look!
               </p>
               <div className="sm:block flex flex-col mt-10">
-                <a
-                  href="https://www.creative-tim.com/learning-lab/tailwind/react/overview/notus?ref=nr-index"
-                  target="_blank"
-                  className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-2 bg-lightBlue-500 active:bg-lightBlue-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+                <Link
+                  href="../auth/register"
+                  className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-2 bg-btncolor active:bg-blueGray-500 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
                 >
                   Get started
-                </a>
+                </Link>
                 <a
-                  href="https://github.com/creativetimofficial/notus-react?ref=nr-index"
+                  href="https://github.com/BecherMejri/PFE-WellFlex"
                   target="_blank"
-                  className="github-star sm:ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg"
+                  className="github-star sm:ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-color303 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg"
                 >
                   <i className="fab fa-github text-lg mr-1"></i>
                   <span>Help With a Star</span>

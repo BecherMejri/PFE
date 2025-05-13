@@ -15,14 +15,14 @@ export default function Navbar(props) {
             <Link
               to="/"
               className="text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
-            >  
-            <div class="flex items-center space-x-4 relative -top-4">
-             <img
+            >
+              <div class="flex items-center space-x-4 relative -top-4">
+                <img
                   alt="..."
                   src={require("assets/img/logo.png").default}
                   class="h-60-px w-60-px  object-contain"
                 />
-            </div>
+              </div>
             </Link>
             <button
               className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
@@ -39,17 +39,7 @@ export default function Navbar(props) {
             }
             id="example-navbar-warning"
           >
-            <ul className="flex flex-col lg:flex-row list-none mr-auto">
-              <li className="flex items-center">
-                <a
-                  className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                  href="https://www.creative-tim.com/learning-lab/tailwind/react/overview/notus?ref=nr-index-navbar"
-                >
-                  <i className="text-blueGray-400 far fa-file-alt text-lg leading-lg mr-2" />{" "}
-                  Docs
-                </a>
-              </li>
-            </ul>
+
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
               <li className="flex items-center">
                 <IndexDropdown />
@@ -89,10 +79,15 @@ export default function Navbar(props) {
 
               <li className="flex items-center">
                 <button
-                  className="bg-btncolor text-white active:bg-blueGray-600 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
+                  className="bg-btncolor text-white active:bg-blueGray-500 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
                   type="button"
                 >
-                  <i className="fas fa-arrow-alt-circle-down"></i> Join Us
+                  <Link
+                    to="../auth/register"
+                  >
+                <i className="fas fa-arrow-alt-circle-down"></i> Join Us
+                  </Link>
+                  
                 </button>
               </li>
             </ul>

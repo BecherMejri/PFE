@@ -1297,6 +1297,10 @@ select {
 .bg-color303 {
   background-color: #313935;
 }
+.bg-color304 {
+  background-color: #606562b8;
+}
+
 .bg-btncolor {
   background-color: #596b66;
 }
@@ -1314,6 +1318,11 @@ select {
 .border-lightBlue-700 {
   --tw-border-opacity: 1;
   border-color: rgba(3, 105, 161, var(--tw-border-opacity));
+}
+
+.border-color303 {
+  --tw-border-opacity: 1;
+  border-color: rgba(#313935, var(--tw-border-opacity));
 }
 
 .border-blueGray-50 {
@@ -1596,6 +1605,10 @@ select {
   font-size: 55rem;
 }
 
+.text-40 {
+  font-size: 40rem;
+}
+
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
@@ -1768,6 +1781,10 @@ select {
 
 .mr-4 {
   margin-right: 1rem;
+}
+
+.mr-8 {
+  margin-right: 4rem;
 }
 
 .mb-4 {
@@ -2452,6 +2469,11 @@ select {
 .text-blueGray-401 {
   --tw-text-opacity: 1;
   color: #99a69d;
+}
+
+.text-blueGray-601 {
+  --tw-text-opacity: 1;
+  color: #dee7e3;;
 }
 
 .text-blueGray-500 {
