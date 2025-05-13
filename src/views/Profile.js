@@ -35,13 +35,13 @@ export default function Profile() {
               y="0"
             >
               <polygon
-                className="text-blueGray-200 fill-current"
+                className="text-blueGray-401 fill-current"
                 points="2560 0 2560 100 0 100"
               ></polygon>
             </svg>
           </div>
         </section>
-        <section className="relative py-16 bg-blueGray-200">
+        <section className="relative py-16 bg-color302">
           <div className="container mx-auto px-4">
             <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
               <div className="px-6">

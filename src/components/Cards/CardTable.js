@@ -41,7 +41,8 @@ export default function CardTable({ color }) {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setNewUser({ ...newUser, [name]: value });
+    setNewUser({...newUser, [name]: value });
+    console.log(newUser);
   };
 
   const AddNewUser = async () => {

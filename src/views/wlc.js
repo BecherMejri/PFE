@@ -111,13 +111,13 @@ export default function wlc() {
                   <div className="relative flex flex-col mt-4">
                     <div className="px-4 py-5 flex-auto">
                       <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
-                        <i className="fas fa-sitemap text-blueGray-501"></i>
+                        <i className="fas fa-chart-line text-blueGray-501 text-2xl"></i>
                       </div>
                       <h6 className="text-xl mb-1 font-semibold text-blueGray-501">
-                        Training Plans
+                        Progress Tracking
                       </h6>
                       <p className="mb-4 text-blueGray-100">
-                        Get fully personalized training programs based on your fitness level, goals, and progress. Our AI coach adapts your workouts in real time, making sure you stay challenged, safe, and on track to results.
+                        Just as your meals fuel your body, your progress fuels your purpose track every rep, gram, and milestone with precision.
 
                       </p>
                     </div>
@@ -156,11 +156,12 @@ export default function wlc() {
                         <i className="fas fa-pizza-slice text-blueGray-501"></i>
                       </div>
                       <h6 className="text-xl mb-1 font-semibold text-blueGray-501">
-                        Diet
+                        Diet Plans
                       </h6>
                       <p className="mb-4 text-blueGray-100">
-                        Our AI-powered platform helps you achieve your health goals by creating personalized food diet plans based on your body type, lifestyle, and preferences. Whether you want to lose weight, gain muscle, manage a health condition, or simply eat healthier.
+                       Just as your workouts adapt to your progress, your nutrition evolves with your goals discover meal plans as unique as your DNA.
                       </p>
+                      
                     </div>
                   </div>
                 </div>
@@ -173,38 +174,82 @@ export default function wlc() {
           <div className="flex flex-wrap items-center">
             <div className="w-full md:w-4/12 px-12 md:px-4 ml-auto mr-auto mt-48">
               <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
-                <i className="fas fa-sitemap text-xl"></i>
+                <i className="fas fa-hamburger text-2xl"></i>
               </div>
               <h3 className="text-3xl mb-2 font-semibold text-blueGray-501 leading-normal">
-                Real Time
+                Diet Plans
               </h3>
-              <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-100">
-                Get fully personalized training programs based on your fitness level, goals, and progress. Our AI coach adapts your workouts in real time, making sure you stay challenged, safe, and on track to results.
+              <p className="text-xl font-light leading-relaxed mt-4 mb-4 text-blueGray-100">
+                Our AI crafts diets that align with your body’s needs, preferences, and lifestyle. No generic plans, no forbidden foods just science-backed fuel for your journey.
               </p>
+              <ul className="list-none mt-6">
+                  <li className="py-2">
+                    <div className="flex items-center">
+                      <div>
+                        <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-50 mr-3">
+                          <i className="fas fa-fingerprint"></i>
+                        </span>
+                      </div>
+                      <div>
+                        <h4 className="text-white">
+                          Recipes auto-adjusted for allergies, dislikes, and cultural preferences
+                        </h4>
+                      </div>
+                    </div>
+                  </li>
+                  <li className="py-2">
+                    <div className="flex items-center">
+                      <div>
+                        <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-50 mr-3">
+                          <i className="fas fa-file-invoice-dollar"></i>
+                        </span>
+                      </div>
+                      <div>
+                        <h4 className="text-white">
+                          Grocery lists with exact quantities (no waste)
+                        </h4>
+                      </div>
+                    </div>
+                  </li>
+                  <li className="py-2">
+                    <div className="flex items-center">
+                      <div>
+                        <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-50 mr-3">
+                          <i className="fas fa-calculator "></i>
+                        </span>
+                      </div>
+                      <div>
+                        <h4 className="text-white">
+                          Macronutrient breakdowns for every meal/snack
+                        </h4>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
               <div className="block pb-6">
                 <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Buttons
+                  Protein
                 </span>
                 <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Inputs
+                  Supplements
                 </span>
                 <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Labels
+                  Vitamins
                 </span>
                 <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Menus
+                  Creatine
                 </span>
                 <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Navbars
+                  Carbs
                 </span>
                 <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Pagination
+                  Fats
                 </span>
                 <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Progressbars
+                  Macros
                 </span>
                 <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Typography
+                  BCAAs
                 </span>
               </div>
               <a
@@ -268,7 +313,7 @@ export default function wlc() {
                         src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/svelte.jpg"
                       />
                       <p className="text-lg text-white mt-4 font-semibold">
-                        Svelte
+                        Progressive Overload
                       </p>
                     </div>
                   </a>
@@ -283,7 +328,7 @@ export default function wlc() {
                         src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/react.jpg"
                       />
                       <p className="text-lg text-white mt-4 font-semibold">
-                        ReactJS
+                        Body Composition
                       </p>
                     </div>
                   </a>
@@ -298,7 +343,7 @@ export default function wlc() {
                         src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/nextjs.jpg"
                       />
                       <p className="text-lg text-white mt-4 font-semibold">
-                        NextJS
+                        Consistency Streaks
                       </p>
                     </div>
                   </a>
@@ -312,10 +357,10 @@ export default function wlc() {
                       <img
                         alt="..."
                         className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                        src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/js.png"
+                        src={require("assets/img/restandrecov.jpg").default}
                       />
                       <p className="text-lg text-white mt-4 font-semibold">
-                        JavaScript
+                        Rest & Recovery
                       </p>
                     </div>
                   </a>
@@ -327,10 +372,10 @@ export default function wlc() {
                       <img
                         alt="..."
                         className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                        src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/angular.jpg"
+                        src={require("assets/img/workoutf.jpg").default}
                       />
                       <p className="text-lg text-white mt-4 font-semibold">
-                        Angular
+                        Workout Frequency
                       </p>
                     </div>
                   </a>
@@ -341,11 +386,11 @@ export default function wlc() {
                     <div className="bg-emerald-500 shadow-lg rounded-lg text-center p-8 mt-8">
                       <img
                         alt="..."
-                        className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                        src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/vue.jpg"
+                        className="shadow-md rounded-full max-w-full w-20 mx-auto p-2 bg-white"
+                        src={require("assets/img/apple.jpg").default}
                       />
                       <p className="text-lg text-white mt-4 font-semibold">
-                        Vue.js
+                        Nutrition Adherence
                       </p>
                     </div>
                   </a>
@@ -633,7 +678,7 @@ export default function wlc() {
               </p>
               <div className="sm:block flex flex-col mt-10">
                 <Link
-                  href="../auth/register"
+                  to="../auth/register"
                   className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-2 bg-btncolor active:bg-blueGray-500 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
                 >
                   Get started
