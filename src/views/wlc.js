@@ -26,14 +26,14 @@ export default function wlc() {
 
               </p>
               <div className="mt-12">
-              
+
                 <Link
                   to="/auth/register"
                   className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-btncolor active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
                 >
                   Get Started
                 </Link>
-            
+
                 <Link
                   to="/auth/login"
                   className="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-color303 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
@@ -159,9 +159,9 @@ export default function wlc() {
                         Diet Plans
                       </h6>
                       <p className="mb-4 text-blueGray-100">
-                       Just as your workouts adapt to your progress, your nutrition evolves with your goals discover meal plans as unique as your DNA.
+                        Just as your workouts adapt to your progress, your nutrition evolves with your goals discover meal plans as unique as your DNA.
                       </p>
-                      
+
                     </div>
                   </div>
                 </div>
@@ -183,49 +183,49 @@ export default function wlc() {
                 Our AI crafts diets that align with your body’s needs, preferences, and lifestyle. No generic plans, no forbidden foods just science-backed fuel for your journey.
               </p>
               <ul className="list-none mt-6">
-                  <li className="py-2">
-                    <div className="flex items-center">
-                      <div>
-                        <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-50 mr-3">
-                          <i className="fas fa-fingerprint"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 className="text-white">
-                          Recipes auto-adjusted for allergies, dislikes, and cultural preferences
-                        </h4>
-                      </div>
+                <li className="py-2">
+                  <div className="flex items-center">
+                    <div>
+                      <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-50 mr-3">
+                        <i className="fas fa-fingerprint"></i>
+                      </span>
                     </div>
-                  </li>
-                  <li className="py-2">
-                    <div className="flex items-center">
-                      <div>
-                        <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-50 mr-3">
-                          <i className="fas fa-file-invoice-dollar"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 className="text-white">
-                          Grocery lists with exact quantities (no waste)
-                        </h4>
-                      </div>
+                    <div>
+                      <h4 className="text-white">
+                        Recipes auto-adjusted for allergies, dislikes, and cultural preferences
+                      </h4>
                     </div>
-                  </li>
-                  <li className="py-2">
-                    <div className="flex items-center">
-                      <div>
-                        <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-50 mr-3">
-                          <i className="fas fa-calculator "></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 className="text-white">
-                          Macronutrient breakdowns for every meal/snack
-                        </h4>
-                      </div>
+                  </div>
+                </li>
+                <li className="py-2">
+                  <div className="flex items-center">
+                    <div>
+                      <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-50 mr-3">
+                        <i className="fas fa-file-invoice-dollar"></i>
+                      </span>
                     </div>
-                  </li>
-                </ul>
+                    <div>
+                      <h4 className="text-white">
+                        Grocery lists with exact quantities (no waste)
+                      </h4>
+                    </div>
+                  </div>
+                </li>
+                <li className="py-2">
+                  <div className="flex items-center">
+                    <div>
+                      <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-50 mr-3">
+                        <i className="fas fa-calculator "></i>
+                      </span>
+                    </div>
+                    <div>
+                      <h4 className="text-white">
+                        Macronutrient breakdowns for every meal/snack
+                      </h4>
+                    </div>
+                  </div>
+                </li>
+              </ul>
               <div className="block pb-6">
                 <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
                   Protein
@@ -306,11 +306,11 @@ export default function wlc() {
                     href="https://www.creative-tim.com/learning-lab/tailwind/svelte/alerts/notus?ref=vtw-index"
                     target="_blank"
                   >
-                    <div className="bg-red-600 shadow-lg rounded-lg text-center p-8">
+                    <div className="bg-progress shadow-lg rounded-lg text-center p-8">
                       <img
                         alt="..."
                         className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                        src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/svelte.jpg"
+                        src={require("assets/img/progress.png").default}
                       />
                       <p className="text-lg text-white mt-4 font-semibold">
                         Progressive Overload
@@ -324,8 +324,8 @@ export default function wlc() {
                     <div className="bg-lightBlue-500 shadow-lg rounded-lg text-center p-8 mt-8">
                       <img
                         alt="..."
-                        className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                        src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/react.jpg"
+                        className="shadow-md rounded-full max-w-full w-12 mx-auto p-2 bg-white"
+                        src={require("assets/img/bodycomp.png").default}
                       />
                       <p className="text-lg text-white mt-4 font-semibold">
                         Body Composition
@@ -340,7 +340,7 @@ export default function wlc() {
                       <img
                         alt="..."
                         className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                        src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/nextjs.jpg"
+                        src={require("assets/img/consistensy.png").default}
                       />
                       <p className="text-lg text-white mt-4 font-semibold">
                         Consistency Streaks
@@ -400,44 +400,39 @@ export default function wlc() {
 
             <div className="w-full md:w-4/12 px-12 md:px-4 ml-auto mr-auto mt-48">
               <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
-                <i className="fas fa-drafting-compass text-xl"></i>
+                <i className="fas fa-chart-line text-blueGray-501 text-2xl"></i>
               </div>
               <h3 className="text-3xl mb-2 font-semibold leading-normal">
-                Javascript Components
+                Your Gains, Quantified
               </h3>
-              <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
-                In order to create a great User Experience some components
-                require JavaScript. In this way you can manipulate the elements
-                on the page and give more options to your users.
+              <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-100">
+                Our AI transforms raw data into actionable insights celebrating strength gains, refining routines, and turning consistency into lasting results. No guesswork, just growth.
               </p>
-              <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
-                We created a set of Components that are dynamic and come to help
-                you.
-              </p>
+            
               <div className="block pb-6">
                 <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Alerts
+                  Adherence 
                 </span>
                 <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Dropdowns
+                  Frequency
                 </span>
                 <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Menus
+                  Recovery
                 </span>
                 <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Modals
+                  Consistency 
                 </span>
                 <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Navbars
+                  Composition
                 </span>
                 <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Popovers
+                  Progress
                 </span>
                 <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Tabs
+                  Body
                 </span>
                 <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2">
-                  Tooltips
+                  Growth
                 </span>
               </div>
               <a
@@ -457,28 +452,25 @@ export default function wlc() {
             <div className="w-full md:w-5/12 ml-auto px-12 md:px-4">
               <div className="md:pr-12">
                 <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
-                  <i className="fas fa-file-alt text-xl"></i>
+                  <i className="fas fa-smile text-2xl"></i>
                 </div>
                 <h3 className="text-3xl font-semibold">
-                  Complex Documentation
+                  Why Choose WellFlex?
                 </h3>
-                <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
-                  This extension comes a lot of fully coded examples that help
-                  you get started faster. You can adjust the colors and also the
-                  programming language. You can change the text and images and
-                  you're good to go.
+                <p className="mt-4 text-lg leading-relaxed text-blueGray-100">
+                  No generic plans, no guesswork just precision coaching that adapts to your body, goals, and lifestyle our Phase based programs that evolve weekly whether you’re lifting at the gym or sweating at home ,We fuse adaptive workouts, precision nutrition, and habit-strengthening analytics into a plan that evolves as fast as you do no two users ever lift, eat, or grow the same.
                 </p>
                 <ul className="list-none mt-6">
                   <li className="py-2">
                     <div className="flex items-center">
                       <div>
                         <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-50 mr-3">
-                          <i className="fas fa-fingerprint"></i>
+                          <i className="fas fa-laptop-code"></i>
                         </span>
                       </div>
                       <div>
-                        <h4 className="text-blueGray-500">
-                          Built by Developers for Developers
+                        <h4 className="text-blueGray-800">
+                          Smart Workouts
                         </h4>
                       </div>
                     </div>
@@ -487,12 +479,12 @@ export default function wlc() {
                     <div className="flex items-center">
                       <div>
                         <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-50 mr-3">
-                          <i className="fab fa-html5"></i>
+                          <i className='fas fa-apple-alt'></i>
                         </span>
                       </div>
                       <div>
-                        <h4 className="text-blueGray-500">
-                          Carefully crafted code for Components
+                        <h4 className="text-blueGray-800">
+                          Adaptive Nutrition
                         </h4>
                       </div>
                     </div>
@@ -505,8 +497,8 @@ export default function wlc() {
                         </span>
                       </div>
                       <div>
-                        <h4 className="text-blueGray-500">
-                          Dynamic Javascript Components
+                        <h4 className="text-blueGray-800">
+                          Progress Intelligence
                         </h4>
                       </div>
                     </div>
@@ -603,26 +595,18 @@ export default function wlc() {
               <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
                 <i className="fas fa-laptop text-xl"></i>
               </div>
-              <h3 className="text-3xl mb-2 font-semibold leading-normal text-white">
-                Open Source
+              <h3 className="text-4xl mb-2 font-semibold leading-normal text-white">
+                Meet Fitz
               </h3>
-              <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-400">
-                Since{" "}
-                <a
-                  href="https://tailwindcss.com/?ref=creativetim"
-                  className="text-blueGray-300"
-                  target="_blank"
-                >
-                  Tailwind CSS
-                </a>{" "}
-                is an open source project we wanted to continue this movement
-                too. You can give this version a try to feel the design and also
-                test the quality of the code!
+              <h2 className="font-semibold text-3xl text-blueGray-100">
+                Your Personalized AI Coach Powered by Rev AI
+              </h2>
+              <p className="text-xl font-light leading-relaxed mt-4 mb-4 text-blueGray-100">
+                Fitz is a certified AI fitness coach built into the Rev AI platform, designed to deliver expert-level training and nutrition guidance with precision and safety based on individual user data. Whether you're a beginner or advanced athlete, Fitz evolves with your journey keeping you safe, informed, and consistently progressing.
               </p>
-              <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-400">
-                Get it free on Github and please help us spread the news with a
-                Star!
-              </p>
+              <p className="text-2xl font-light leading-relaxed mt-4 mb-4 text-blueGray-200"> Fitz is not just a tool, but a trusted digital coach for your transformation.</p>
+
+              
               <Link
                 href="https://github.com/creativetimofficial/notus-react?ref=nr-index"
                 target="_blank"
@@ -669,12 +653,10 @@ export default function wlc() {
                 </span>
               </p>
               <h3 className="font-semibold text-3xl">
-                Do you love this Starter Kit?
+                Do you love this Gain Engine?
               </h3>
               <p className="text-blueGray-500 text-lg leading-relaxed mt-4 mb-4">
-                Cause if you do, it can be yours now. Hit the buttons below to
-                navigate to get the Free version for your next project. Build a
-                new web app or give an old project a new look!
+                Hit ‘Get Started’ or star ⭐ our repo if you dig the gains-engineering Start building your legacy  or help us build ours!
               </p>
               <div className="sm:block flex flex-col mt-10">
                 <Link
