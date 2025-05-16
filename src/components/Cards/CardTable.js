@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { getAllUsers, deleteUserById, addUser , updateUser } from "../../services/ApiUser"; //1 importation
+import { getAllUsers, deleteUserById, addUser, updateUser } from "../../services/ApiUser"; //1 importation
 // components
 
 export default function CardTable({ color }) {
@@ -30,14 +30,14 @@ export default function CardTable({ color }) {
     getUsers();
   }, []);
 
-  //--------------add-----------------
   const [newUser, setNewUser] = useState({
     firstName: "",
     lastName: "",
-    age: "",
+    role: "",
     email: "",
     password: "",
   });
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -54,9 +54,9 @@ export default function CardTable({ color }) {
     }
   };
 
-  const updateNewUser = async (newUser,id) => {
+  const updateNewUser = async (newUser, id) => {
     try {
-      await updateUser(newUser,id);
+      await updateUser(newUser, id);
       getUsers();
     } catch (error) {
       console.log(error);
@@ -100,14 +100,7 @@ export default function CardTable({ color }) {
                   value={newUser.lastName}
                   onChange={handleChange}
                 />
-                <input
-                  type="number"
-                  placeholder="age"
-                  className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring mr-2 ease-linear transition-all duration-150"
-                  name="age"
-                  value={newUser.age}
-                  onChange={handleChange}
-                />
+
                 <input
                   type="email"
                   placeholder="email"
@@ -123,6 +116,16 @@ export default function CardTable({ color }) {
                   className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring ease-linear transition-all duration-150"
                   onChange={handleChange}
                 />
+                 <select
+                  className="border-0 px-12 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring ml-2 ease-linear transition-all duration-150"
+                  name="role"
+                  value={newUser.role}
+                  onChange={handleChange}
+                >
+                  <option value="user" className="text-blueGray-600" >User</option>
+                  <option value="admin" className="text-blueGray-600" >Admin</option>
+                </select>
+
                 <br></br>
                 <button
                   onClick={() => {
@@ -134,7 +137,7 @@ export default function CardTable({ color }) {
                 </button>
                 <button
                   onClick={() => {
-                    updateNewUser(newUser,newUser._id);
+                    updateNewUser(newUser, newUser._id);
                   }}
                   className="bg-btncolor mt-2 text-white active:bg-blueGray-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                 >
@@ -187,7 +190,7 @@ export default function CardTable({ color }) {
                       : "bg-lightBlue-800 text-lightBlue-300 border-lightBlue-700")
                   }
                 >
-                  CreatedAt
+                  Role
                 </th>
                 <th
                   className={
@@ -226,7 +229,7 @@ export default function CardTable({ color }) {
                     {user.email}
                   </td>
                   <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                    {user.createdAt}
+                    {user.role}
                   </td>
                   <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right">
                     <button
@@ -268,7 +271,6 @@ export default function CardTable({ color }) {
     </>
   );
 }
-
 CardTable.defaultProps = {
   color: "light",
 };

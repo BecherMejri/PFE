@@ -3,17 +3,31 @@ import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 
 export default function Login() {
-  const history = useHistory();
-  const [newAccount, setNewAccount] = useState({
-    email: "", password: ""
+    const history = useHistory();
+  const [newAccount , setNewAccount] = useState({
+    email :"",password:"",role:"user"
   })
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setNewAccount({ ...newAccount, [name]: value })
+    const { name , value } = e.target;
+    setNewAccount({...newAccount , [name]: value})
   }
 
+  const login2 = async () => {
+    try {
+      const res = await login(newAccount);
+      console.log("res", res);  // S'assurer que res est bien défini
+      localStorage.setItem("user", JSON.stringify(res.data.user)); // Sauvegarde les infos dans localStorage
 
+      if(res.data.user.role === "user"){
+        history.push("/landing");
+      }else{
+        history.push("/admin/tables");
+      }
+    } catch (error) {
+      console.error("Erreur de connexion :", error);
+    }
+  };
 
 
   return (
@@ -77,8 +91,10 @@ export default function Login() {
                     <button
                       className="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
                       type="button"
+                      onClick={()=>{login2(newAccount)}}
                     >
                       Sign In
+                      onClick={()=>{login2(newAccount)}}
                     </button>
                   </div>
                   <div className="flex flex-wrap mt-6 relative">

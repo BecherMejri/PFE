@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 
 export default function Register() {
   const history = useHistory();
-  const [role, setRole] = useState("student")
+  const [role, setRole] = useState("user")
   const [newAccount, setNewAccount] = useState({
     firstName: "",
     email: "",
@@ -115,6 +115,9 @@ export default function Register() {
                     <button
                       className="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
                       type="button"
+                      onClick={() => {
+                      addData(newAccount);
+                      }}
                     >
                       Create Account
                     </button>
