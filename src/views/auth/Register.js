@@ -5,16 +5,20 @@ import { useHistory } from "react-router-dom";
 
 export default function Register() {
   const history = useHistory();
-  const [role, setRole] = useState("user")
   const [newAccount, setNewAccount] = useState({
     firstName: "",
     email: "",
     password: "",
-  });
+    role:"user",
+    age: "",
+    address: "",
+    city: "",
+    country: "",
+    postalcode:""});
 
   const handelChange = (e) => {
     const { name, value } = e.target;
-    setNewAccount({ ...newAccount, [name]: value });
+    setNewAccount({...newAccount, [name]: value });
   };
 
   const addData = async () => {

@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 export default function Login() {
     const history = useHistory();
   const [newAccount , setNewAccount] = useState({
-    email :"",password:"",role:"user"
+    email :"",password:"",
   })
 
   const handleChange = (e) => {
@@ -15,7 +15,7 @@ export default function Login() {
 
   const login2 = async () => {
     try {
-      const res = await login(newAccount);
+      const res = await Login(newAccount);
       console.log("res", res);  // S'assurer que res est bien défini
       localStorage.setItem("user", JSON.stringify(res.data.user)); // Sauvegarde les infos dans localStorage
 
@@ -58,6 +58,8 @@ export default function Login() {
                       type="email"
                       className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                       placeholder="Email"
+                      name="email"
+                      onChange={handleChange}
                     />
                   </div>
 
@@ -72,6 +74,8 @@ export default function Login() {
                       type="password"
                       className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                       placeholder="Password"
+                      name="password"
+                      onChange={handleChange}
                     />
                   </div>
                   <div>
@@ -94,7 +98,6 @@ export default function Login() {
                       onClick={()=>{login2(newAccount)}}
                     >
                       Sign In
-                      onClick={()=>{login2(newAccount)}}
                     </button>
                   </div>
                   <div className="flex flex-wrap mt-6 relative">

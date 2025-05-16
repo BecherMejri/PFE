@@ -3,6 +3,10 @@ import React from "react";
 // components
 
 export default function CardSettings() {
+  const user = JSON.parse(localStorage.getItem("user"));
+  console.log("Utilisateur récupéré :", user);
+  
+  
   return (
     <>
       <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-color305 border-0">
@@ -34,7 +38,7 @@ export default function CardSettings() {
                   <input
                     type="text"
                     className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    defaultValue="lucky.jesse"
+                    defaultValue={firstname}
                   />
                 </div>
               </div>
